@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-		<script src="app.js" defer></script>
+        <script type="module" src="app.js" defer></script>
+        <script type="module" src="https://cdn.skypack.dev/@faker-js/faker" defer></script>
 		<title>Freelancers</title>
 	</head>
 	<body
@@ -23,10 +24,10 @@
 			Available Freelancers
 		</h3>
 		<table class="border-collapse table-fixed w-full text-sm max-w-6xl">
-			<thead>
-				<tr>
+			<thead >
+				<tr class="cursor-pointer" id="table-header">
 					<th
-						class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+						class="border-b  dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
 					>
 						Name
 					</th>
@@ -44,5 +45,9 @@
 			</thead>
 			<tbody class="bg-white dark:bg-slate-800" id="table-body"></tbody>
 		</table>
+        <div class="flex flex-row gap-4">
+            <button class="bg-slate-900 text-white px-4 py-2 rounded-md" id="add-freelancer">Add Freelancer</button>
+        <button class="bg-slate-900 text-white px-4 py-2 rounded-md" id="sortPrice">Sort by lowest starting price</button>
+        </div>
 	</body>
 </html>
