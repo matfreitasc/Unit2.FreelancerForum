@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-screen">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="app.js" defer></script>
-		<title>Document</title>
+		<title>Freelancers</title>
 	</head>
-	<body>
-		<h1 class="text-3xl font-bold underline">Hello world!</h1>
+	<body
+		class="bg-white dark:bg-slate-700 h-screen flex justify-center items-center flex-col gap-3"
+	>
+		<h1 class="text-5xl font-medium text-slate-900 dark:text-slate-100">
+			Welcome to the Freelancer Finder Forum
+		</h1>
+		<p class="text-2xl font-light text-slate-900 dark:text-slate-100 italic">
+			The average starting price is: <span id="average-price"></span>
+		</p>
+
+		<h3
+			class="text-3xl font-light italic text-slate-900 dark:text-slate-100 mt-5"
+		>
+			Available Freelancers
+		</h3>
+		<table class="border-collapse table-fixed w-full text-sm max-w-6xl">
+			<thead>
+				<tr>
+					<th
+						class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+					>
+						Name
+					</th>
+					<th
+						class="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+					>
+						Occupancy
+					</th>
+					<th
+						class="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+					>
+						Starting Price
+					</th>
+				</tr>
+			</thead>
+			<tbody class="bg-white dark:bg-slate-800" id="table-body"></tbody>
+		</table>
 	</body>
 </html>
